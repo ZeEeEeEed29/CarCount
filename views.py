@@ -1,5 +1,11 @@
 # Important imports
-from app import app
+#from app import app
+from flask import Flask
+
+app = Flask(__name__)
+
+app.config.from_object("config.DevelopmentConfig")
+
 from flask import request, render_template, url_for
 import cv2
 import numpy as np
